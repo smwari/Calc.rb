@@ -1,0 +1,103 @@
+
+def add(num1, num2)
+  return num1.to_i + num2.to_i
+end
+
+def subtract(num1, num2)
+  return num1.to_i - num2.to_i
+end
+
+def multiply(num1, num2)
+  return num1.to_i * num2.to_i
+end
+
+def divide(num1, num2)
+  return num1.to_i / num2.to_i
+end
+
+def remainder(num1, num2)
+  return num1.to_i % num2.to_i
+end
+
+def square(num1)
+  return num1.to_i ** 2
+end
+
+def squareRoot(num1)
+  return num1.sqrt.to_i
+end
+
+# This prompt happens before we start the "until" loop - we only want to welcome the user once.
+puts "Welcome to the Ruby calculator. You can type 'exit' at any time to leave. \nWhat would you like to do do?"
+choice = gets.chomp
+
+# The calculator starts looping here.
+until choice == "exit" 
+  if choice == "add"
+    puts "What is your first number?"
+    first_num = gets.chomp
+ 
+    puts "what is your second number?"
+    second_num = gets.chomp
+    
+    puts add(first_num, second_num)
+  
+  elsif choice == "subtract"
+    puts "What is your first number?"
+    first_num = gets.chomp
+    
+    puts "What is your second number?"
+    second_num = gets.chomp
+    
+    puts subtract(first_num, second_num)
+    
+  elsif choice == "multiply"
+    puts "What is your first number?"
+    first_num = gets.chomp
+    
+    puts "What is your second number?"
+    second_num = gets.chomp
+    
+    puts multiply(first_num, second_num)
+    
+  elsif choice == "divide"
+    puts "What is your first number?"
+  first_num = gets.chomp
+  
+    puts "What is your second number?"
+  second_num = gets.chomp
+  
+    puts divide(first_num, second_num)
+  
+  elsif choice == "square"
+    puts "What number would u like to square?"
+  first_num = gets.chomp
+  
+    puts square(first_num)
+    
+  elsif choice == "divide"
+    puts "What is your first number?"
+    first_num = gets.chomp
+    
+    puts "What is your second number?"
+    second_num = gets.chomp
+    
+    puts remainder(first_num, second_num)
+    
+    elsif choice == "squareroot"
+    puts "What would u like to get the square root of?"
+    first_num = gets.chomp
+    
+    puts squareRoot(first_num)
+      
+    
+  else 
+    puts "Sorry, I haven't been programmed to do that yet."
+
+  end
+
+   puts "What would you like to do next?"
+  choice = gets.chomp
+  
+
+end
